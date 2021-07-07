@@ -1,2 +1,3 @@
 .gcloudignore
 __pycache__/
+venv/
