@@ -1,4 +1,7 @@
 runtime: python38
-entrypoint: gunicorn -b :$PORT main:app
-manual_scaling:
-  instances: 1
+entrypoint: gunicorn -b :$PORT main:app --timeout 120
+
+resources:
+  cpu: 1
+  memory_gb: 3
+  disk_size_gb: 10
